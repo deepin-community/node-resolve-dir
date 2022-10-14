@@ -1,0 +1,28 @@
+Description: patch away dependency of tests on homedir-polyfill
+Author: Paolo Greppi <paolo.greppi@libpf.com>
+Forwarded: not-needed
+
+Index: node-resolve-dir/test.js
+===================================================================
+--- node-resolve-dir.orig/test.js
++++ node-resolve-dir/test.js
+@@ -9,7 +9,7 @@
+ 
+ require('mocha');
+ var path = require('path');
+-var homedir = require('homedir-polyfill');
++var os = require('os');
+ var assert = require('assert');
+ var gm = require('global-modules');
+ var resolve = require('./');
+@@ -20,8 +20,8 @@ describe('resolve', function() {
+   });
+ 
+   it('should resolve the path to user home:', function() {
+-    assert.equal(resolve('~'), homedir());
+-    assert.equal(resolve('~/foo'), path.join(homedir(), '/foo'));
++    assert.equal(resolve('~'), os.homedir());
++    assert.equal(resolve('~/foo'), path.join(os.homedir(), '/foo'));
+   });
+ 
+   it('should resolve the path to global npm modules:', function() {

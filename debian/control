@@ -1,0 +1,28 @@
+Source: node-resolve-dir
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>,
+           Paolo Greppi <paolo.greppi@libpf.com>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-expand-tilde <!nocheck>
+ , node-global-modules <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-resolve-dir
+Vcs-Git: https://salsa.debian.org/js-team/node-resolve-dir.git
+Homepage: https://github.com/jonschlinkert/resolve-dir
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-resolve-dir
+Architecture: all
+Depends: ${misc:Depends}
+ , node-expand-tilde
+ , node-global-modules
+Description: Resolve a directory
+ Resolve a directory that is either local, global or in the user's home
+ directory.
+ .
+ Node.js is an event-based server-side JavaScript engine.

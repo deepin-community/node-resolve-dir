@@ -1,0 +1,43 @@
+node-resolve-dir (1.0.1-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-expand-tilde,
+      node-global-modules and nodejs.
+    + node-resolve-dir: Drop versioned constraint on node-expand-tilde,
+      node-global-modules and nodejs in Depends.
+  * Bump debhelper from old 12 to 13.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.0
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+    * Fix filenamemangle
+    * Fix GitHub tags regex
+  * Drop dependency to nodejs
+  * Mark test dependencies with <!nocheck>
+  * Use dh-sequence-nodejs auto test & install
+
+ -- Yadd <yadd@debian.org>  Tue, 16 Nov 2021 21:58:27 +0100
+
+node-resolve-dir (1.0.1-2) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * New upstream release
+  * Bump debian/compat and std version
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Mon, 23 Apr 2018 09:52:54 +0200
+
+node-resolve-dir (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #842774)
+
+ -- Sruthi Chandran <srud@disroot.org>  Tue, 01 Nov 2016 12:27:21 +0530
